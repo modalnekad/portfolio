@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Portfolio</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -32,17 +29,6 @@ nav {
     position: sticky;
     top: 0;
     background: rgba(15,23,42,0.8);
-    backdrop-filter: blur(10px);
-}
-
-nav h2 {
-    color: #38bdf8;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
 }
 
 /* HERO */
@@ -53,93 +39,49 @@ nav a {
     padding: 100px 60px;
 }
 
-.hero-text h1 {
-    font-size: 48px;
-}
-
-.hero-text span {
-    background: linear-gradient(90deg, #38bdf8, #6366f1);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.hero-text p {
-    margin: 20px 0;
-    color: #cbd5e1;
-}
-
-.btn {
-    background: linear-gradient(90deg, #6366f1, #38bdf8);
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-}
-
-/* FOTO WRAPPER (ANTI GAGAL BULAT) */
+/* FOTO BULAT */
 .photo-wrapper {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #38bdf8;
-    box-shadow: 0 0 30px rgba(56,189,248,0.7);
-    animation: float 3s ease-in-out infinite;
 }
 
-/* FOTO */
 .photo-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* FLOAT ANIMATION */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
 /* SECTION */
 .section {
-    padding: 80px 60px;
+    padding: 70px 60px;
     text-align: center;
 }
 
+/* CARD */
 .cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
-
 .card {
     background: #1e293b;
-    padding: 25px;
+    padding: 20px;
     width: 260px;
-    border-radius: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
 }
-
 .card:hover {
     transform: translateY(-10px);
 }
 
-/* STATS */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px;
-}
-
-.stats h3 {
-    color: #38bdf8;
-}
-
 /* CTA */
 .cta {
+    padding: 60px;
     text-align: center;
-    padding: 80px;
     background: linear-gradient(90deg, #6366f1, #38bdf8);
 }
 
@@ -148,14 +90,6 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 </style>
 </head>
@@ -168,67 +102,99 @@ footer {
     <div>
         <a href="#">Home</a>
         <a href="#about">About</a>
-        <a href="#project">Project</a>
+        <a href="#services">Jasa</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-text" data-aos="fade-right">
-        <h1>Hi, Saya <span>UNDANG RISNANDANG</span></h1>
-        <p>Mahasiswa & Web Developer</p>
-        <a href="#project" class="btn">Lihat Proyek</a>
+    <div data-aos="fade-right">
+        <h1>Hi, Saya <span style="color:#38bdf8;">UNDANG RISNANDANG</span></h1>
+        <p>Teknisi Jaringan & IT Support</p>
     </div>
 
-    <!-- FOTO BULAT FIX -->
     <div class="photo-wrapper" data-aos="fade-left">
-        <img src="profile.jpeg" alt="Foto Saya">
+        <img src="profile.jpeg">
     </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section" data-aos="fade-up">
     <h2>Tentang Saya</h2>
-    <p>Saya sedang belajar membuat website modern.</p>
+    <p>Saya seorang teknisi jaringan yang fokus pada instalasi, konfigurasi, dan maintenance jaringan komputer dan internet.</p>
 </section>
 
-<!-- PROJECT -->
-<section id="project" class="section">
-    <h2 data-aos="fade-up">Proyek</h2>
+<!-- PEKERJAAN -->
+<section class="section">
+    <h2 data-aos="fade-up">Pekerjaan</h2>
+    <div class="cards">
+        <div class="card" data-aos="zoom-in">
+            <h3>IT Support</h3>
+            <p>Maintenance komputer & jaringan</p>
+        </div>
+        <div class="card" data-aos="zoom-in">
+            <h3>Network Engineer</h3>
+            <p>Setup jaringan & troubleshooting</p>
+             <p>Setup CCTV & troubleshooting</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOBI -->
+<section class="section">
+    <h2 data-aos="fade-up">Hobi</h2>
+    <div class="cards">
+        <div class="card" data-aos="zoom-in">
+            <h3>Ngoding</h3>
+        </div>
+        <div class="card" data-aos="zoom-in">
+            <h3>Networking</h3>
+        </div>
+        <div class="card" data-aos="zoom-in">
+            <h3>Belajar Teknologi</h3>
+        </div>
+    </div>
+</section>
+
+<!-- JASA -->
+<section id="services" class="section">
+    <h2 data-aos="fade-up">Layanan Jasa</h2>
 
     <div class="cards">
         <div class="card" data-aos="zoom-in">
-            <h3>Portfolio</h3>
-            <p>Website personal</p>
+            <h3>Setting Mikrotik</h3>
+            <p>Konfigurasi router, hotspot, bandwidth management</p>
         </div>
+
         <div class="card" data-aos="zoom-in">
-            <h3>Landing Page</h3>
-            <p>Website bisnis</p>
+            <h3>Bangun Jaringan</h3>
+            <p>Instalasi jaringan LAN/WAN untuk kantor & rumah</p>
         </div>
+
         <div class="card" data-aos="zoom-in">
-            <h3>Web App</h3>
-            <p>Aplikasi web</p>
+            <h3>Kabel FO</h3>
+            <p>Penarikan & penyambungan fiber optik (splicing)</p>
+        </div>
+
+        <div class="card" data-aos="zoom-in">
+            <h3>Pasang WiFi</h3>
+            <p>Setup access point & jaringan internet</p>
         </div>
     </div>
 </section>
 
-<!-- STATS -->
-<section class="stats">
-    <div data-aos="flip-up">
-        <h3>10+</h3>
-        <p>Project</p>
-    </div>
-    <div data-aos="flip-up">
-        <h3>5+</h3>
-        <p>Client</p>
-    </div>
+<!-- CTA -->
+<section class="cta">
+    <h2>Butuh jasa jaringan?</h2>
+    <p>Hubungi saya sekarang</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section" data-aos="fade-up">
-    <h2>0853 1421 3407</h2>
+<section id="contact" class="section">
+    <h2>Kontak</h2>
     <p>Email: undangrisnandang19@gmail.com</p>
+    <p>WhatsApp: 0853 1421 3407</p>
 </section>
 
 <!-- FOOTER -->
@@ -236,11 +202,8 @@ footer {
     <p>© 2026 - janguud</p>
 </footer>
 
-<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
+<script>AOS.init();</script>
 
 </body>
 </html>
