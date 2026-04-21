@@ -8,7 +8,7 @@
 <!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<!-- AOS ANIMATION -->
+<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -43,11 +43,6 @@ nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #38bdf8;
 }
 
 /* HERO */
@@ -79,25 +74,27 @@ nav a:hover {
     border-radius: 8px;
     text-decoration: none;
     color: white;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-}
-
-/* FOTO */
-.hero img {
+/* FOTO WRAPPER (ANTI GAGAL BULAT) */
+.photo-wrapper {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    object-fit: cover;
+    overflow: hidden;
     border: 4px solid #38bdf8;
     box-shadow: 0 0 30px rgba(56,189,248,0.7);
     animation: float 3s ease-in-out infinite;
 }
 
-/* ANIMATION FLOAT */
+/* FOTO */
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FLOAT ANIMATION */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
@@ -110,11 +107,6 @@ nav a:hover {
     text-align: center;
 }
 
-.section h2 {
-    margin-bottom: 20px;
-}
-
-/* CARDS */
 .cards {
     display: flex;
     gap: 20px;
@@ -127,12 +119,10 @@ nav a:hover {
     padding: 25px;
     width: 260px;
     border-radius: 15px;
-    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: #334155;
 }
 
 /* STATS */
@@ -140,11 +130,9 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     padding: 60px;
-    text-align: center;
 }
 
 .stats h3 {
-    font-size: 30px;
     color: #38bdf8;
 }
 
@@ -153,10 +141,6 @@ nav a:hover {
     text-align: center;
     padding: 80px;
     background: linear-gradient(90deg, #6366f1, #38bdf8);
-}
-
-.cta h2 {
-    margin-bottom: 20px;
 }
 
 /* FOOTER */
@@ -171,16 +155,6 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 20px;
     }
 }
 </style>
@@ -207,34 +181,34 @@ footer {
         <a href="#project" class="btn">Lihat Proyek</a>
     </div>
 
-    <!-- FOTO KAMU -->
-    <img src="profile.jpeg" alt="Foto Saya" data-aos="fade-left">
+    <!-- FOTO BULAT FIX -->
+    <div class="photo-wrapper" data-aos="fade-left">
+        <img src="profile.jpeg" alt="Foto Saya">
+    </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section" data-aos="fade-up">
     <h2>Tentang Saya</h2>
-    <p>Saya sedang belajar membuat website modern dan profesional.</p>
+    <p>Saya sedang belajar membuat website modern.</p>
 </section>
 
 <!-- PROJECT -->
 <section id="project" class="section">
-    <h2 data-aos="fade-up">Proyek Saya</h2>
+    <h2 data-aos="fade-up">Proyek</h2>
 
     <div class="cards">
         <div class="card" data-aos="zoom-in">
             <h3>Portfolio</h3>
-            <p>Website personal modern</p>
+            <p>Website personal</p>
         </div>
-
         <div class="card" data-aos="zoom-in">
             <h3>Landing Page</h3>
             <p>Website bisnis</p>
         </div>
-
         <div class="card" data-aos="zoom-in">
             <h3>Web App</h3>
-            <p>Aplikasi berbasis web</p>
+            <p>Aplikasi web</p>
         </div>
     </div>
 </section>
@@ -249,16 +223,6 @@ footer {
         <h3>5+</h3>
         <p>Client</p>
     </div>
-    <div data-aos="flip-up">
-        <h3>1 Tahun</h3>
-        <p>Experience</p>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" data-aos="fade-up">
-    <h2>Siap membuat website keren?</h2>
-    <a href="#contact" class="btn">Hubungi Saya</a>
 </section>
 
 <!-- CONTACT -->
@@ -269,16 +233,13 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 - UUD</p>
+    <p>© 2026 - janguud</p>
 </footer>
 
-<!-- AOS SCRIPT -->
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({
-    duration: 1000,
-    once: true
-});
+AOS.init();
 </script>
 
 </body>
